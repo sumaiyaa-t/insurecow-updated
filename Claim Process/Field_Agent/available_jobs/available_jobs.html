@@ -12,14 +12,8 @@
       crossorigin="anonymous"
     />
 
-    <!--==================== FONT AWESOME ====================-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="./css/login_page.css" />
+    <link rel="stylesheet" href="./css/homepage.css" />
 
     <title>InsureCow</title>
   </head>
@@ -31,7 +25,7 @@
         <nav class="navbar navbar-expand-lg navbar-light pb-0">
           <div class="container-fluid">
             <!--Navbar Logo-->
-            <a href="../../index.html" class="navbar-brand">
+            <a href="#" class="navbar-brand">
               <img src="./images/logo.png" alt="Logo" />
             </a>
 
@@ -45,30 +39,27 @@
             </button>
 
             <div id="navbarCollapse" class="collapse navbar-collapse">
-              <!--About Us-->
+              <!--Home-->
               <ul class="nav navbar-nav ms-auto">
                 <li class="nav-item navbar-brand">
-                  <a href="#" class="nav-link">About Us</a>
+                  <a href="./homepage.html" class="nav-link">Home</a>
                 </li>
 
-                <!--Plans-->
+                <!--Profile-->
                 <li class="nav-item navbar-brand">
-                  <a href="#" class="nav-link">Plans</a>
+                  <a href="../profile/profile.html" class="nav-link">Profile</a>
                 </li>
 
-                <!--Features-->
+                <!--Notification-->
                 <li class="nav-item navbar-brand">
-                  <a href="#" class="nav-link">Features </a>
+                  <a href="../notification/notification.html" class="nav-link"
+                    >Notification</a
+                  >
                 </li>
 
-                <!--Our Goals-->
+                <!--Sign out-->
                 <li class="nav-item navbar-brand">
-                  <a href="#" class="nav-link">Our Goals</a>
-                </li>
-
-                <!--Contact Us-->
-                <li class="nav-item navbar-brand">
-                  <a href="#" class="nav-link">Contact Us </a>
+                  <button type="submit" class="signout-button">SignOut</button>
                 </li>
               </ul>
 
@@ -91,85 +82,58 @@
       </div>
     </header>
 
-    <!--==================== LOG IN ====================-->
+    <!--==================== HOME SECTION ====================-->
 
     <section>
-      <div class="row g-0 mt-5 mb-5">
-        <div class="col-lg-6">
-          <div class="card card-style h-100">
-            <div class="card-body">
-              <img src="./images/cow2.png" class="img-fluid" alt="Cow" />
+      <h6 class="top-header-style">Field Agent's Dashboard</h6>
+    </section>
+
+    <section class="mt-5 mb-4 p-4">
+      <div>
+        <p class="p-welcome-text">Choose your preferred job type</p>
+      </div>
+
+      <div class="row mt-5">
+        <div class="d-lg-flex d-md-flex justify-content-center">
+          <!--Cow Lists-->
+          <div class="col-lg-4 col-md-6 mb-4 me-lg-5 me-md-4">
+            <div class="card card-style">
+              <div class="p-2 card-block-top">
+                <h4 class="card-title">New Cow Registration</h4>
+              </div>
+              <img
+                src="./images/cow-reg.jpg"
+                alt="Registered Cow"
+                class="img-fluid img-card"
+              />
+              <div class="text-center p-4">
+                <a
+                  href="/Field_Agent_Site/form_page/form_page.html"
+                  class="btn card-button"
+                  >Continue</a
+                >
+              </div>
             </div>
           </div>
-        </div>
 
-        <!--Sign In Form-->
-        <div class="col-lg-6">
-          <div class="card login-card p-5 h-100">
-            <div class="card-body">
-              <p class="login-text mb-4">Sign In</p>
-              <p class="p-welcome-text mb-5">Welcome To Insure Cow!</p>
-
-              <form>
-                <!--User Name-->
-                <div class="mb-4">
-                  <label for="username" class="form-label">User Name: </label>
-                  <input
-                    type="text"
-                    class="form-control fontAwesome input-form"
-                    placeholder="&#xf007;"
-                    required="required"
-                  />
-                </div>
-
-                <!--User Password-->
-                <div class="mb-4">
-                  <label for="password" class="form-label">Password: </label>
-                  <input
-                    type="password"
-                    class="form-control fontAwesome input-form"
-                    id="password"
-                    placeholder="&#xf023;"
-                    required="required"
-                  />
-                </div>
-
-                <!--Terms & Conditions-->
-                <div class="col-12 mb-4">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="invalidCheck2"
-                      required
-                    />
-                    <label class="form-check-label" for="invalidCheck2">
-                      I agree to platform Terms of Service and Privacy Policy
-                    </label>
-                  </div>
-                </div>
-
-                <!--Log In Button-->
-                <a href="/Claim Process/Farmer/homepage/homepage.html"
-                  ><button type="button" class="login-button mb-4">
-                    Log In
-                  </button></a
+          <!--Field Agent Details-->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card card-style">
+              <div class="p-2 card-block-top">
+                <h4 class="card-title">Insurance Claim</h4>
+              </div>
+              <img
+                src="./images/insurance-claim.jpg"
+                alt="Insurance Claim"
+                class="img-fluid img-card"
+              />
+              <div class="text-center p-4">
+                <a
+                  href="../view_registered/view_registered.html"
+                  class="btn card-button"
+                  >Continue</a
                 >
-
-                <!--Form Footer-->
-                <div class="d-flex justify-content-between mb-5">
-                  <a href="../otp_page/otp_page.html" class="form-footer-text"
-                    >Forgot password?</a
-                  >
-                  <a
-                    href="../register_page_02/register_page_02.html"
-                    class="form-footer-text"
-                    >Register</a
-                  >
-                </div>
-              </form>
-              <hr class="hr-style" />
+              </div>
             </div>
           </div>
         </div>

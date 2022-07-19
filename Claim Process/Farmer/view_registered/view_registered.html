@@ -12,14 +12,22 @@
       crossorigin="anonymous"
     />
 
-    <!--==================== FONT AWESOME ====================-->
+    <!--=============== DATATABLE CSS ===============-->
     <link
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css"
+      rel="stylesheet"
     />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="./css/login_page.css" />
+    <link rel="stylesheet" href="./css/view_registered.css" />
 
     <title>InsureCow</title>
   </head>
@@ -31,7 +39,7 @@
         <nav class="navbar navbar-expand-lg navbar-light pb-0">
           <div class="container-fluid">
             <!--Navbar Logo-->
-            <a href="../../index.html" class="navbar-brand">
+            <a href="/index.html" class="navbar-brand">
               <img src="./images/logo.png" alt="Logo" />
             </a>
 
@@ -45,30 +53,27 @@
             </button>
 
             <div id="navbarCollapse" class="collapse navbar-collapse">
-              <!--About Us-->
+              <!--Home-->
               <ul class="nav navbar-nav ms-auto">
                 <li class="nav-item navbar-brand">
-                  <a href="#" class="nav-link">About Us</a>
+                  <a href="../homepage/homepage.html" class="nav-link">Home</a>
                 </li>
 
-                <!--Plans-->
+                <!--Profile-->
                 <li class="nav-item navbar-brand">
-                  <a href="#" class="nav-link">Plans</a>
+                  <a href="../profile/profile.html" class="nav-link">Profile</a>
                 </li>
 
-                <!--Features-->
+                <!--Notification-->
                 <li class="nav-item navbar-brand">
-                  <a href="#" class="nav-link">Features </a>
+                  <a href="../notification/notification.html" class="nav-link"
+                    >Notification</a
+                  >
                 </li>
 
-                <!--Our Goals-->
+                <!--Sign out-->
                 <li class="nav-item navbar-brand">
-                  <a href="#" class="nav-link">Our Goals</a>
-                </li>
-
-                <!--Contact Us-->
-                <li class="nav-item navbar-brand">
-                  <a href="#" class="nav-link">Contact Us </a>
+                  <button type="submit" class="signout-button">SignOut</button>
                 </li>
               </ul>
 
@@ -91,88 +96,70 @@
       </div>
     </header>
 
-    <!--==================== LOG IN ====================-->
+    <!--==================== DATATABLE SECTION ====================-->
+    <section class="mt-4 mb-5">
+      <h3 class="text-center mb-5">Insurance Claim List</h3>
+      <div>
+        <table id="insurecow-datatable" class="display" style="width: 100%">
+          <thead class="thead-style">
+            <tr>
+              <th>ID</th>
+              <th>Job ID</th>
+              <th>Cattle ID</th>
+              <th>Status</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>101</td>
+              <td>1010</td>
+              <td>Claim in process</td>
+              <td>Your report claim is in process.</td>
+            </tr>
 
-    <section>
-      <div class="row g-0 mt-5 mb-5">
-        <div class="col-lg-6">
-          <div class="card card-style h-100">
-            <div class="card-body">
-              <img src="./images/cow2.png" class="img-fluid" alt="Cow" />
-            </div>
-          </div>
-        </div>
+            <tr>
+              <td>2</td>
+              <td>102</td>
+              <td>1011</td>
+              <td>Claim in Review</td>
+              <td>Your report is in review. We’ll notify you soon.</td>
+            </tr>
 
-        <!--Sign In Form-->
-        <div class="col-lg-6">
-          <div class="card login-card p-5 h-100">
-            <div class="card-body">
-              <p class="login-text mb-4">Sign In</p>
-              <p class="p-welcome-text mb-5">Welcome To Insure Cow!</p>
+            <tr>
+              <td>3</td>
+              <td>103</td>
+              <td>1012</td>
+              <td>Field Agent is sent</td>
+              <td>Field Agent is on his way.</td>
+            </tr>
 
-              <form>
-                <!--User Name-->
-                <div class="mb-4">
-                  <label for="username" class="form-label">User Name: </label>
-                  <input
-                    type="text"
-                    class="form-control fontAwesome input-form"
-                    placeholder="&#xf007;"
-                    required="required"
-                  />
-                </div>
+            <tr>
+              <td>4</td>
+              <td>104</td>
+              <td>1013</td>
+              <td>Field Agent is sent</td>
+              <td>Field Agent is on his way.</td>
+            </tr>
 
-                <!--User Password-->
-                <div class="mb-4">
-                  <label for="password" class="form-label">Password: </label>
-                  <input
-                    type="password"
-                    class="form-control fontAwesome input-form"
-                    id="password"
-                    placeholder="&#xf023;"
-                    required="required"
-                  />
-                </div>
+            <tr>
+              <td>5</td>
+              <td>105</td>
+              <td>1014</td>
+              <td>Claim raised</td>
+              <td>Field Agent will be assigned.</td>
+            </tr>
 
-                <!--Terms & Conditions-->
-                <div class="col-12 mb-4">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="invalidCheck2"
-                      required
-                    />
-                    <label class="form-check-label" for="invalidCheck2">
-                      I agree to platform Terms of Service and Privacy Policy
-                    </label>
-                  </div>
-                </div>
-
-                <!--Log In Button-->
-                <a href="/Claim Process/Farmer/homepage/homepage.html"
-                  ><button type="button" class="login-button mb-4">
-                    Log In
-                  </button></a
-                >
-
-                <!--Form Footer-->
-                <div class="d-flex justify-content-between mb-5">
-                  <a href="../otp_page/otp_page.html" class="form-footer-text"
-                    >Forgot password?</a
-                  >
-                  <a
-                    href="../register_page_02/register_page_02.html"
-                    class="form-footer-text"
-                    >Register</a
-                  >
-                </div>
-              </form>
-              <hr class="hr-style" />
-            </div>
-          </div>
-        </div>
+            <tr>
+              <td>6</td>
+              <td>106</td>
+              <td>1015</td>
+              <td>Payment is on process</td>
+              <td>Your payment process is being reviewed.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -230,6 +217,22 @@
         </div>
       </footer>
     </section>
+
+    <!--=============== DATATABLE JS ===============-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#insurecow-datatable").DataTable();
+      });
+
+      $("#insurecow-datatable").DataTable({
+        responsive: true,
+      });
+    </script>
 
     <!--==================== JavaScript Bundle with Popper ====================-->
     <script

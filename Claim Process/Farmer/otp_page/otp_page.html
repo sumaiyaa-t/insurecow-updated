@@ -19,7 +19,7 @@
     />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="./css/login_page.css" />
+    <link rel="stylesheet" href="./css/otp_page.css" />
 
     <title>InsureCow</title>
   </head>
@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-lg navbar-light pb-0">
           <div class="container-fluid">
             <!--Navbar Logo-->
-            <a href="../../index.html" class="navbar-brand">
+            <a href="/index.html" class="navbar-brand">
               <img src="./images/logo.png" alt="Logo" />
             </a>
 
@@ -91,7 +91,7 @@
       </div>
     </header>
 
-    <!--==================== LOG IN ====================-->
+    <!--==================== OTP PAGE ====================-->
 
     <section>
       <div class="row g-0 mt-5 mb-5">
@@ -103,72 +103,45 @@
           </div>
         </div>
 
-        <!--Sign In Form-->
+        <!--OTP Form-->
         <div class="col-lg-6">
-          <div class="card login-card p-5 h-100">
+          <div class="card right-card p-5 h-100">
             <div class="card-body">
-              <p class="login-text mb-4">Sign In</p>
-              <p class="p-welcome-text mb-5">Welcome To Insure Cow!</p>
+              <p class="heading-text mb-4">OTP Verification</p>
+              <p class="subheading-text mb-5">
+                Enter the OTP to verify your account
+              </p>
 
               <form>
-                <!--User Name-->
+                <!--Enter OTP-->
                 <div class="mb-4">
-                  <label for="username" class="form-label">User Name: </label>
+                  <label for="otp" class="form-label">Enter OTP:</label>
                   <input
                     type="text"
-                    class="form-control fontAwesome input-form"
-                    placeholder="&#xf007;"
+                    class="form-control input-form"
                     required="required"
                   />
                 </div>
 
-                <!--User Password-->
-                <div class="mb-4">
-                  <label for="password" class="form-label">Password: </label>
-                  <input
-                    type="password"
-                    class="form-control fontAwesome input-form"
-                    id="password"
-                    placeholder="&#xf023;"
-                    required="required"
-                  />
-                </div>
-
-                <!--Terms & Conditions-->
-                <div class="col-12 mb-4">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="invalidCheck2"
-                      required
-                    />
-                    <label class="form-check-label" for="invalidCheck2">
-                      I agree to platform Terms of Service and Privacy Policy
-                    </label>
-                  </div>
-                </div>
-
-                <!--Log In Button-->
-                <a href="/Claim Process/Farmer/homepage/homepage.html"
-                  ><button type="button" class="login-button mb-4">
-                    Log In
+                <!--Verify Button-->
+                <a href="../view_registered/view_registered.html"
+                  ><button type="button" class="verify-button">
+                    Verify
                   </button></a
                 >
 
                 <!--Form Footer-->
-                <div class="d-flex justify-content-between mb-5">
-                  <a href="../otp_page/otp_page.html" class="form-footer-text"
-                    >Forgot password?</a
-                  >
+                <div class="mb-5">
                   <a
-                    href="../register_page_02/register_page_02.html"
+                    href="/Field_Agent_Site/login_page/login_page.html"
                     class="form-footer-text"
-                    >Register</a
                   >
+                    <i class="fas fa-arrow-left"></i>
+                    Back to login
+                  </a>
                 </div>
               </form>
+
               <hr class="hr-style" />
             </div>
           </div>
