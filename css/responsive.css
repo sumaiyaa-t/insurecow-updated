@@ -4,6 +4,9 @@
 
 /* =========== MAX 991PX =========== */
 @media only screen and (max-width: 991px) {
+
+  
+
   .insurecow-logo {
     height: 60px;
   }
@@ -99,6 +102,12 @@
     width: 340px;
     height: 500px;
   }
+  .team-members{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media only screen and (max-width: 767px) {
   .farmer-img-margin {
@@ -112,6 +121,12 @@
 
   .insurecow-logo {
     height: 60px;
+  }
+  .team-members{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   /* .image-margin-set {
     margin-left: -10px;

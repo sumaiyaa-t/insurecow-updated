@@ -2288,3 +2288,10 @@ img {
 #footer a.fa-linkedin-in:hover {
   background: #3b5998;
 }
+
+.team-members{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
