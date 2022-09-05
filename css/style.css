@@ -489,6 +489,10 @@ nav .navbar-nav li a:hover {
   position: relative;
   padding: 120px 0px;
 }
+.about-2-section {
+  position: relative;
+  padding: 50px 0px;
+}
 
 .about-section .content-column {
   position: relative;
@@ -2289,7 +2293,7 @@ img {
   background: #3b5998;
 }
 
-.team-members{
+.team-members {
   display: flex;
   flex-direction: row;
   align-items: center;
