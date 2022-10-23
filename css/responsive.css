@@ -4,9 +4,6 @@
 
 /* =========== MAX 991PX =========== */
 @media only screen and (max-width: 991px) {
-
-  
-
   .insurecow-logo {
     height: 60px;
   }
@@ -90,6 +87,9 @@
     height: 500px;
     margin-top: 4rem;
   }
+  .blog-image {
+    height: auto;
+  }
 }
 
 /* =========== MAX 767PX =========== */
@@ -102,7 +102,7 @@
     width: 340px;
     height: 500px;
   }
-  .team-members{
+  .team-members {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,6 +110,10 @@
   }
 }
 @media only screen and (max-width: 767px) {
+  .blog-image {
+    height: auto;
+  }
+
   .farmer-img-margin {
     margin-top: 0px;
   }
@@ -122,7 +126,7 @@
   .insurecow-logo {
     height: 60px;
   }
-  .team-members{
+  .team-members {
     display: flex;
     flex-direction: column;
     align-items: center;
